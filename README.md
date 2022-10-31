@@ -12,10 +12,11 @@ Repo for [Visualizing Large Greenhouse Gas Datasets in the Browser With deck.gl]
 1. Create a new file named `.env.local` in the root directory. This file is in `.gitignore` and shouldn't be checked into Github.
 1. Open `.env.local` and add this line (be sure to paste your token): `MAPBOX_ACCESS_TOKEN=PASTE_YOUR_TOKEN_HERE`
 1. \$ `npm start`
-1. 
 
 ## Step by step previews
 
+### Step 1
 ![Step 1](images/step1.png)
 
+### Step 2
 ![Step 2](images/step2.png)
