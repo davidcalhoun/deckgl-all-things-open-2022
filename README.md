@@ -12,9 +12,10 @@ Repo for [Visualizing Large Greenhouse Gas Datasets in the Browser With deck.gl]
 1. Create a new file named `.env.local` in the root directory. This file is in `.gitignore` and shouldn't be checked into Github.
 1. Open `.env.local` and add this line (be sure to paste your token): `MAPBOX_ACCESS_TOKEN=PASTE_YOUR_TOKEN_HERE`
 1. \$ `npm start`
+1. 
 
-## Notes
+## Step by step previews
 
-### mapbox-gl
+![Step 1](images/step1.png)
 
-See https://docs.mapbox.com/mapbox-gl-js/guides/install/#transpiling and follow the recommended browserslist to avoid the "An error occurred while parsing the WebWorker bundle" error.
+![Step 2](images/step2.png)

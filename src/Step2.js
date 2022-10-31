@@ -6,6 +6,9 @@ import Map from 'react-map-gl';
 
 import './styles.css';
 
+/**
+ * Let loaders.gl know that we need CSV support.
+ */
 registerLoaders(CSVLoader);
 
 /**
@@ -20,14 +23,21 @@ const METHANE_DATA_FILENAME = './epa-ch4-2021.csv';
  */
 export default function App() {
     const layers = [
-        // See https://deck.gl/docs/api-reference/layers/scatterplot-layer
+        /**
+         * Scatterplot renders as circles over the map.
+         * See https://deck.gl/docs/api-reference/layers/scatterplot-layer
+         */
         new ScatterplotLayer({
             id: 'scatterplot-layer',
             data: METHANE_DATA_FILENAME,
-            filled: true,
-            radiusUnits: 'pixels',
             radiusMinPixels: 1,
-            getPosition: ({ Latitude, Longitude }) => [Longitude, Latitude]
+            /**
+             * Maps the longitude and latitude in the CSV to a coordinate so the point
+             * can be positioned correctly.  Note that coordinate order here is explicitly
+             * [Longitude, Latitude] to conform to the GeoJSON spec.
+             * See https://www.rfc-editor.org/rfc/rfc7946#section-3.1.1
+             */
+            getPosition: ({ Longitude, Latitude }) => [Longitude, Latitude]
         })
     ];
 
