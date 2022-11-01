@@ -18,6 +18,7 @@ export default function App() {
                     latitude: 40,
                     zoom: 3.5
                 }}
+                // Makes our map interactive.
                 controller={true}
             >
                 {/* react-map-gl for rendering base map tiles, see https://visgl.github.io/react-map-gl/docs/api-reference/map */}

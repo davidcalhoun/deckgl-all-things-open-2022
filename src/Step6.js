@@ -78,7 +78,9 @@ export default function App() {
             },
 
             // Step 6 additions
+            // Let deck.gl know we want to make the points interactive (hoverable and clickable/tappable).
             pickable: true,
+            // Quick and dirty way to display point metadata when hovering over points.
             onHover: (data) => {
                 if (!data.object) return;
 
