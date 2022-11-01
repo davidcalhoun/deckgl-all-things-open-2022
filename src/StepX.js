@@ -84,8 +84,8 @@ export default function App() {
                 console.log(222, data[CSV_METHANE_KEY]);
                 return data[CSV_METHANE_KEY];
             },
-            filterRange: [350027, 2268589]
-            //extensions: [new DataFilterExtension({ filterSize: 1 })]
+            filterRange: [500000, 2268589]
+            extensions: [new DataFilterExtension({ filterSize: 1 })]
         })
     ];
 
