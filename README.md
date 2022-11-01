@@ -21,17 +21,17 @@ Also check out the [talk slides](https://docs.google.com/presentation/d/1ZWWzyoW
 ### [Step 1](src/Step1.js)
 ![Step 1](images/step1.png)
 
-### Step 2
+### [Step 2](src/Step2.js)
 ![Step 2](images/step2.png)
 
-### Step 3
+### [Step 3](src/Step3.js)
 ![Step 3](images/step3.png)
 
-### Step 4
+### [Step 4](src/Step4.js)
 ![Step 4](images/step4.png)
 
-### Step 5
+### [Step 5](src/Step5.js)
 ![Step 5](images/step5.gif)
 
-### Step 6
+### [Step 6](src/Step6.js)
 ![Step 6](images/step6.gif)
