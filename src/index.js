@@ -13,6 +13,7 @@ const root = createRoot(rootElement);
 
 root.render(
     <StrictMode>
-        <Step6 />
+        {/* Instructions: replace this with the step you'd like to preview! */}
+        <Step1 />
     </StrictMode>
 );
