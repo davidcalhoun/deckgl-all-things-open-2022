@@ -18,7 +18,7 @@ Also check out the [talk slides](https://docs.google.com/presentation/d/1ZWWzyoW
 
 ## Step by step previews
 
-### Step 1
+### [Step 1](src/Step1.js)
 ![Step 1](images/step1.png)
 
 ### Step 2
