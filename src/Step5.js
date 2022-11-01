@@ -69,7 +69,9 @@ export default function App() {
             extensions: [new DataFilterExtension({ filterSize: 1 })],
 
             // Step 5 additions and changes
+            // Removed the hard-coded 500000 value and changed to the user-controlled lowerRange value.
             filterRange: [lowerRange, MAX_METHANE_TONS_CO2EQUIVALENT],
+            // Important!  Let deck.gl know it needs to update the filterRange prop when lowerRange changes.
             updateTriggers: {
                 filterRange: lowerRange
             }
@@ -98,6 +100,7 @@ export default function App() {
                     mapboxAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
                 />
             </DeckGL>
+            {/* Simple UI slider to let the user control lowerRange for the filter.  */}
             <input
                 className="slider"
                 type="range"

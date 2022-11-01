@@ -30,7 +30,7 @@ export default function App() {
         new ScatterplotLayer({
             id: 'scatterplot-layer',
             data: METHANE_DATA_FILENAME,
-            radiusMinPixels: 1,
+            radiusMinPixels: 1, // makes sure our data is somewhat visible!
             /**
              * Maps the longitude and latitude in the CSV to a coordinate so the point
              * can be positioned correctly.  Note that coordinate order here is explicitly

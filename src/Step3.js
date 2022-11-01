@@ -32,6 +32,12 @@ const COLORS = {
  * Step 3
  */
 export default function App() {
+    /**
+     * radiusScale maps from methane value to pixel value.
+     * Example usage:
+     * radiusScale(2268589);
+     * // -> 25
+     */
     const radiusScale = scaleRadial().domain([1, MAX_METHANE_TONS_CO2EQUIVALENT]).rangeRound([1, MAX_RADIUS_PIXELS]);
 
     const layers = [
@@ -52,12 +58,24 @@ export default function App() {
             getPosition: ({ Longitude, Latitude }) => [Longitude, Latitude],
 
             // Step 3 additions
+            /**
+             * radiusUnits defaults to 'meters', so we need to tell deck.gl to use 'pixels' instead.
+             * This ensures that bubbles are the same size regardless of zoom level.
+             */
             radiusUnits: 'pixels',
+            /**
+             * We need to let deck.gl know how translate the CSV row entry into a radius,
+             * so we'll tell it to use our custom radiusScale.
+             */
             getRadius: (csvRowObj) => {
                 const methaneTonsCO2Equivalent = csvRowObj[CSV_METHANE_KEY];
                 return radiusScale(methaneTonsCO2Equivalent);
             },
             getFillColor: COLORS.PURPLE,
+            /**
+             * Make semitransparent so we can better see circles even if they're overlapping.  Also helps us
+             * see the underlying map tiles (especially if they're satellite tiles!).
+             */
             opacity: 0.4
         })
     ];

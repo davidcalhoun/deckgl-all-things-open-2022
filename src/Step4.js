@@ -62,8 +62,17 @@ export default function App() {
             opacity: 0.4,
 
             // Step 4 additions
+            /**
+             * getFilterValue tells deck.gl how to get the value we want to filter.
+             */
             getFilterValue: (data) => data[CSV_METHANE_KEY],
+            /**
+             * Hard-coded filter to only show methane sources > 500,000 tons methane CO2e.
+             */
             filterRange: [500000, MAX_METHANE_TONS_CO2EQUIVALENT],
+            /**
+             * Lets the layer know we're filtering on one value.  This filtering happens on the GPU!
+             */
             extensions: [new DataFilterExtension({ filterSize: 1 })]
         })
     ];
