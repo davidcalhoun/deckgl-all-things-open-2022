@@ -1,0 +1,27 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+/* Mapbox attribution style overrides. */
+.mapboxgl-ctrl-attrib-button {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    left: 1rem;
+}
+
+.point-details {
+    position: absolute;
+    left: 1rem;
+    bottom: 2rem;
+    background: white;
+    border: 1px solid grey;
+    padding: 1rem 2rem;
+    width: 20rem;
+    height: 8rem;
+    white-space: pre-wrap;
+    text-align: left;
+}
