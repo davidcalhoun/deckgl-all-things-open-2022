@@ -1,12 +1,13 @@
+/**
+ * Step 1: sets up a container for deck.gl and base map tiles.
+ * Visualization goal: answer the question "where are the biggest methane emissions and who is responsible?"
+ */
 import React from 'react';
 import DeckGL from 'deck.gl';
 import Map from 'react-map-gl';
 
 import './styles.css';
 
-/**
- * Step 1: setup a container for deck.gl and the base map tiles.
- */
 export default function App() {
     return (
         <div className="App">

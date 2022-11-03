@@ -1,3 +1,8 @@
+/**
+ * Step 2: loads our CSV dataset (under /public/epa-ch4-2021.csv) as a deck.gl ScatterplotLayer.
+ * Visualization goal: answer the question "where are the biggest methane emissions and who is responsible?"
+ * This step starts to tell the "where" part of the story.
+ */
 import React from 'react';
 import DeckGL, { ScatterplotLayer } from 'deck.gl';
 import { registerLoaders } from '@loaders.gl/core';
@@ -18,9 +23,6 @@ registerLoaders(CSVLoader);
  */
 const METHANE_DATA_FILENAME = './epa-ch4-2021.csv';
 
-/**
- * Step 2: load our CSV dataset as a Scatterplot.
- */
 export default function App() {
     const layers = [
         /**

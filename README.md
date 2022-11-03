@@ -2,6 +2,8 @@
 
 Repo for [Visualizing Large Greenhouse Gas Datasets in the Browser With deck.gl](https://2022.allthingsopen.org/sessions/2-for-1-visualizing-large-greenhouse-gas-datasets-in-the-browser-with-deck-gl-tba/)
 
+The goal of this visualization: answer the question "where are the biggest methane emissions and who is responsible"?
+
 Also check out the [talk slides](https://docs.google.com/presentation/d/1ZWWzyoWJsVWcA2O52SRLX4XC59VhDE9UlZGGjdlUM5U/edit)!
 
 ## Installation
