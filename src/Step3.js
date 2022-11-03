@@ -73,6 +73,15 @@ export default function App() {
                 const methaneTonsCO2Equivalent = csvRowObj[CSV_METHANE_KEY];
                 return radiusScale(methaneTonsCO2Equivalent);
             },
+            /**
+             * Make the points look nice.  Caution though!  Colors can affect understanding, mood, etc.
+             * For instance, selecting red colors will signal "danger" in Western countries, which isn't
+             * the story we want to tell here.  Other colors have other associations, such as blue meaning
+             * "cold", which is confusing since our story is connected to climate warming.
+             * See more:
+             * https://en.wikipedia.org/wiki/Stroop_effect
+             * https://informationisbeautiful.net/visualizations/colours-in-cultures/
+             */
             getFillColor: COLORS.PURPLE,
             /**
              * Make semitransparent so we can better see circles even if they're overlapping.  Also helps us
