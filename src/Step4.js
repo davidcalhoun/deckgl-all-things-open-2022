@@ -1,3 +1,8 @@
+/**
+ * Step 4: filters out lower intensity emissions based on a hard-coded threshold (500000 tons methane CO2e).
+ * Visualization goal: answer the question "where are the biggest methane emissions and who is responsible?"
+ * This step helps declutter and only show the "biggest emissions" based on a hardcoded threshold.
+ */
 import React from 'react';
 import DeckGL, { ScatterplotLayer } from 'deck.gl';
 import { registerLoaders } from '@loaders.gl/core';
@@ -29,9 +34,6 @@ const COLORS = {
     PURPLE: [129, 15, 124]
 };
 
-/**
- * Step 2: load our CSV dataset as a Scatterplot.
- */
 export default function App() {
     const radiusScale = scaleRadial().domain([1, MAX_METHANE_TONS_CO2EQUIVALENT]).rangeRound([1, MAX_RADIUS_PIXELS]);
 

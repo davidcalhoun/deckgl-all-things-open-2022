@@ -1,3 +1,8 @@
+/**
+ * Step 6: allows users to interact with points to see details about the industry, company, and methane tons CO2e value.
+ * Visualization goal: answer the question "where are the biggest methane emissions and who is responsible?"
+ * This step tells the story of "who is responsible?"
+ */
 import React, { useState } from 'react';
 import DeckGL, { ScatterplotLayer } from 'deck.gl';
 import { registerLoaders } from '@loaders.gl/core';
@@ -31,9 +36,6 @@ const COLORS = {
     PURPLE: [129, 15, 124]
 };
 
-/**
- * Step 2: load our CSV dataset as a Scatterplot.
- */
 export default function App() {
     const [lowerRange, setLowerRange] = useState(1);
     const [pointDetails, setPointDetails] = useState('');

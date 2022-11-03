@@ -1,3 +1,8 @@
+/**
+ * Step 3: scatterplot styling adjustments (radius, color, and opacity).
+ * Visualization goal: answer the question "where are the biggest methane emissions and who is responsible?"
+ * This step starts to tell the "where are the biggest emissions" part of the story.
+ */
 import React from 'react';
 import DeckGL, { ScatterplotLayer } from 'deck.gl';
 import { registerLoaders } from '@loaders.gl/core';
@@ -28,9 +33,6 @@ const COLORS = {
     PURPLE: [129, 15, 124]
 };
 
-/**
- * Step 3
- */
 export default function App() {
     /**
      * radiusScale maps from methane value to pixel value.
